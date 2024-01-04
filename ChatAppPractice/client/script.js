@@ -7,7 +7,7 @@ const form = document.getElementById("form")
 
 const socket = io("http://localhost:3000")
 socket.on("connect", () => {
-    displayMessage('You connected with id: ${socket.id}')   //Message displayed to CLIENT (defined by us below)
+    displayMessage(`You connected with id: ${socket.id}`)   //Message displayed to CLIENT (defined by us below)
     socket.emit('custom-event', 10, 'Hi', {a: 'a'})         //sends an event out to the SERVER
 })
 
